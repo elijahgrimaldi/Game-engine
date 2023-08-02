@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Haku">
+      <UniqueIdentifier>{AE35867C-9A6C-870D-4359-6D102F6F030F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Haku\Events">
+      <UniqueIdentifier>{D2F10C6B-3EA7-8560-C79B-7F3733507C64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Haku.h" />
+    <ClInclude Include="src\Haku\Application.h">
+      <Filter>Haku</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Haku\Core.h">
+      <Filter>Haku</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Haku\Entrypoint.h">
+      <Filter>Haku</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Haku\Events\ApplicationEvent.h">
+      <Filter>Haku\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Haku\Events\Event.h">
+      <Filter>Haku\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Haku\Events\KeyEvent.h">
+      <Filter>Haku\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Haku\Events\MouseEvent.h">
+      <Filter>Haku\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Haku\Log.h">
+      <Filter>Haku</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Haku\Application.cpp">
+      <Filter>Haku</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Haku\Log.cpp">
+      <Filter>Haku</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

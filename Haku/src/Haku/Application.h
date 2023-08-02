@@ -1,10 +1,11 @@
 #pragma once
 
 #include "Core.h"
+#include "Events/Event.h"
 
-namespace Hazel {
+namespace Haku {
 
-	class HAZEL_API Application
+	class HAKU_API Application
 	{
 	public:
 		Application();

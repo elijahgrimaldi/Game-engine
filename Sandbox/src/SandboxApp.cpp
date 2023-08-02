@@ -1,6 +1,6 @@
-#include <Hazel.h>
+#include <Haku.h>
 
-class Sandbox : public Hazel::Application
+class Sandbox : public Haku::Application
 {
 public:
 	Sandbox()
@@ -14,7 +14,7 @@ public:
 	}
 };
 
-Hazel::Application* Hazel::CreateApplication()
+Haku::Application* Haku::CreateApplication()
 {
 	return new Sandbox();
 }

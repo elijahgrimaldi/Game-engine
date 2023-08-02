@@ -1,6 +1,8 @@
 #include "Application.h"
 
-namespace Hazel {
+#include "Haku/Events/ApplicationEvent.h"
+#include "Haku/Log.h"
+namespace Haku {
 	Application::Application()
 	{
 	}
@@ -8,6 +10,9 @@ namespace Hazel {
 	{
 	}
 	void Application::Run() {
+		WindowResizeEvent e(1280, 720);
+		HK_CORE_WARN(e);
+
 		while (true);
 	}
 }
