@@ -14,8 +14,6 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include <GL/gl.h>
-
 
 #ifdef HK_PLATFORM_WINDOWS
 	#include <Windows.h>
