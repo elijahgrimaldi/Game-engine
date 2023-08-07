@@ -1,3 +1,6 @@
 [submodule "Haku/vendor/spdlog"]
 	path = Haku/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Haku/vendor/GLFW"]
+	path = Haku/vendor/GLFW
+	url = https://github.com/elijahgrimaldi/glfw

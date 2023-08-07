@@ -7,6 +7,12 @@
     <Filter Include="Haku\Events">
       <UniqueIdentifier>{D2F10C6B-3EA7-8560-C79B-7F3733507C64}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Haku.h" />
@@ -31,16 +37,39 @@
     <ClInclude Include="src\Haku\Events\MouseEvent.h">
       <Filter>Haku\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Haku\Layer.h">
+      <Filter>Haku</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Haku\LayerStack.h">
+      <Filter>Haku</Filter>
+    </ClInclude>
     <ClInclude Include="src\Haku\Log.h">
       <Filter>Haku</Filter>
     </ClInclude>
+    <ClInclude Include="src\Haku\Window.h">
+      <Filter>Haku</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hkpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Haku\Application.cpp">
       <Filter>Haku</Filter>
     </ClCompile>
+    <ClCompile Include="src\Haku\Layer.cpp">
+      <Filter>Haku</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Haku\LayerStack.cpp">
+      <Filter>Haku</Filter>
+    </ClCompile>
     <ClCompile Include="src\Haku\Log.cpp">
       <Filter>Haku</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hkpch.cpp" />
   </ItemGroup>
 </Project>

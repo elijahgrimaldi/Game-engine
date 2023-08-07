@@ -1,8 +1,7 @@
 #pragma once
+#include "hkpch.h"
 #include "Haku/Core.h"
 
-#include <string>
-#include <functional>
 
 
 namespace Haku {
@@ -38,6 +37,7 @@ namespace Haku {
 	{
 		friend class EventDispatcher;
 	public:
+		bool IsHandled() const { return m_Handled; }
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;

@@ -10,6 +10,12 @@ workspace "Haku"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder {solution directory}
+IncludeDir = {}
+IncludeDir["GLFW"] = "Haku/vendor/GLFW/include"
+
+include "Haku/vendor/GLFW"
+
 project "Haku"
     location "Haku"
     kind "SharedLib"
@@ -17,6 +23,9 @@ project "Haku"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+    pchheader "hkpch.h"
+    pchsource "Haku/src/hkpch.cpp"
 
     files
     {
@@ -27,7 +36,13 @@ project "Haku"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
     
     filter "system:windows"
@@ -43,19 +58,22 @@ project "Haku"
 
         postbuildcommands
         {
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+            ("{COPY} %{cfg.buildtarget.relpath} ../bin/%{outputdir}/Sandbox")
         }
 
     filter "configurations:Debug"
         defines "HK_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "HK_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "HK_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "Sandbox"
@@ -88,6 +106,11 @@ project "Sandbox"
         staticruntime "On"
         systemversion "latest"
 
+        links
+        {
+            "GLFW",
+            "opengl32.lib"
+        }
         defines
         {
             "HK_PLATFORM_WINDOWS"
@@ -95,12 +118,17 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "HK_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "HK_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "HK_DIST"
+        buildoptions "/MD"
         optimize "On"
+
+        

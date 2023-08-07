@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Haku {
 
 	class HAKU_API KeyEvent : public Event

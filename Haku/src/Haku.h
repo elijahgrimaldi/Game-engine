@@ -3,6 +3,7 @@
 // FOR USE IN THE HAKU APPLICATIONS
 
 #include "Haku/Application.h"
+#include "Haku/Layer.h"
 #include "Haku/Log.h"
 
 
