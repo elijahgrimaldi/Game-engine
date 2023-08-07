@@ -14,9 +14,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Haku/vendor/GLFW/include"
 IncludeDir["Glad"] = "Haku/vendor/Glad/include"
+IncludeDir["ImGui"] = "Haku/vendor/imgui"
 
 include "Haku/vendor/GLFW"
 include "Haku/vendor/Glad"
+include "Haku/vendor/ImGui"
 
 
 project "Haku"
@@ -41,13 +43,15 @@ project "Haku"
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
-        "%{IncludeDir.Glad}"
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}"
     }
     links
     {
         "GLFW",
         "Glad",
-        "opengl32.lib"
+        "opengl32.lib",
+        "ImGui"
     }
     
     filter "system:windows"

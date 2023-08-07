@@ -4,3 +4,6 @@
 [submodule "Haku/vendor/GLFW"]
 	path = Haku/vendor/GLFW
 	url = https://github.com/elijahgrimaldi/glfw
+[submodule "Haku/vendor/imgui"]
+	path = Haku/vendor/imgui
+	url = https://github.com/elijahgrimaldi/imgui

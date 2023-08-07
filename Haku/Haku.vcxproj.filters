@@ -7,8 +7,14 @@
     <Filter Include="Haku\Events">
       <UniqueIdentifier>{D2F10C6B-3EA7-8560-C79B-7F3733507C64}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Haku\ImGui">
+      <UniqueIdentifier>{58B5B7DC-446D-F929-AD74-D285994B941A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Haku\Events\MouseEvent.h">
       <Filter>Haku\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Haku\ImGui\ImGuiLayer.h">
+      <Filter>Haku\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Haku\Layer.h">
       <Filter>Haku</Filter>
     </ClInclude>
@@ -49,14 +58,21 @@
     <ClInclude Include="src\Haku\Window.h">
       <Filter>Haku</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\hkpch.h" />
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Haku\Application.cpp">
       <Filter>Haku</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Haku\ImGui\ImGuiLayer.cpp">
+      <Filter>Haku\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Haku\Layer.cpp">
       <Filter>Haku</Filter>
@@ -66,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="src\Haku\Log.cpp">
       <Filter>Haku</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
