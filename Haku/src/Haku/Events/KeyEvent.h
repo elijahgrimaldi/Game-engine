@@ -53,6 +53,25 @@ namespace Haku {
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
+	class HAKU_API KeyTypedEvent : public KeyEvent
+	{
+	public:
+		KeyTypedEvent(int keycode, unsigned int character)
+			: KeyEvent(keycode), m_Char(character) {}
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "KeyReleasedEvent: " << m_KeyCode;
+			return ss.str();
+		}
+
+		inline unsigned int GetChar() { return m_Char; }
+
+		EVENT_CLASS_TYPE(KeyTyped)
+	private:
+		unsigned int m_Char;
+	};
 
 
 }
