@@ -107,7 +107,7 @@ namespace Haku {
 		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int character)
 			{
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-				KeyTypedEvent event((int) character, character);f
+				KeyTypedEvent event((int) character, character);
 				data.EventCallback(event);
 
 			});

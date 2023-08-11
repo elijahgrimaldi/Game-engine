@@ -1,5 +1,6 @@
 workspace "Haku"
     architecture "x64"
+    startproject "Sandbox"
 
     configurations
     {
@@ -15,10 +16,14 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Haku/vendor/GLFW/include"
 IncludeDir["Glad"] = "Haku/vendor/Glad/include"
 IncludeDir["ImGui"] = "Haku/vendor/imgui"
+IncludeDir["glm"] = "Haku/vendor/glm"
+
 
 include "Haku/vendor/GLFW"
 include "Haku/vendor/Glad"
 include "Haku/vendor/ImGui"
+
+
 
 
 project "Haku"
@@ -36,6 +41,7 @@ project "Haku"
     {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp",
+        "%{prj.name}/vendor/glm/glm/**.hpp"
     }
 
     includedirs
@@ -44,7 +50,9 @@ project "Haku"
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.glm }"
+
     }
     links
     {
@@ -103,7 +111,8 @@ project "Sandbox"
     includedirs
     {
         "Haku/vendor/spdlog/include",
-        "Haku/src"
+        "Haku/src",
+        "%{IncludeDir.glm}"
     }
     
     links

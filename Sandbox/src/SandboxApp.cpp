@@ -12,6 +12,9 @@ public:
 	void OnUpdate() override
 	{
 		HK_INFO("ExampleLayer::Update");
+
+		if (Haku::Input::IsKeyPressed(HK_KEY_TAB))
+			HK_TRACE("Tab key is pressed");
 	}
 
 	void OnEvent(Haku::Event& event) override
