@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef HK_PLATFORM_WINDOWS
+#if HK_DYNAMIC_LINK
 	#ifdef HK_BUILD_DLL
 		#define HAKU_API __declspec(dllexport)
 	#else
 		#define HAKU_API __declspec(dllimport)
 	#endif
+#else
+	#define HAKU_API
+#endif
 #else
 	#error Haku only supports Windows!
 #endif
