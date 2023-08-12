@@ -171,8 +171,6 @@
     <ClInclude Include="src\Haku\Log.h" />
     <ClInclude Include="src\Haku\MouseButtonCodes.h" />
     <ClInclude Include="src\Haku\Window.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
-    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\hkpch.h" />
@@ -456,11 +454,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Haku\Application.cpp" />
+    <ClCompile Include="src\Haku\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Haku\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Haku\Layer.cpp" />
     <ClCompile Include="src\Haku\LayerStack.cpp" />
     <ClCompile Include="src\Haku\Log.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\hkpch.cpp">

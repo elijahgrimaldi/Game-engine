@@ -93,12 +93,6 @@
     <ClInclude Include="src\Haku\Window.h">
       <Filter>src\Haku</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>src\Platform\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h">
-      <Filter>src\Platform\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsInput.h">
       <Filter>src\Platform\Windows</Filter>
     </ClInclude>
@@ -956,9 +950,6 @@
     <ClCompile Include="src\Haku\Log.cpp">
       <Filter>src\Haku</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>src\Platform\OpenGL</Filter>
-    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
@@ -968,5 +959,6 @@
     <ClCompile Include="src\hkpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Haku\ImGui\ImGuiBuild.cpp" />
   </ItemGroup>
 </Project>
