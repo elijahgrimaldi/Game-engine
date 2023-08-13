@@ -1,8 +1,11 @@
 #pragma once
 
 #include "Haku/Window.h" 
+#include "Haku\Renderer\GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
+
+
 
 namespace Haku {
 
@@ -28,6 +31,7 @@ namespace Haku {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{
